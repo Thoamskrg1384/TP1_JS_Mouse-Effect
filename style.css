@@ -11,13 +11,14 @@
 }
 li {
   list-style: none;
-  z-index: 20;
 }
 a,
 a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 100;
+  position: relative;
 }
 a:hover {
   font-size: 1.3rem;
@@ -28,6 +29,30 @@ body {
   color: rgb(246, 246, 246);
   min-height: 100vh;
 }
+.mouse {
+  position: absolute;
+  border-radius: 100px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#cursor {
+  background: #2128bd;
+  width: 14px;
+  height: 14px;
+}
+#mouse1 {
+  height: 100px;
+  width: 100px;
+  background: white;
+  transition: 0.15s ease-out;
+}
+#mouse2 {
+  height: 200px;
+  width: 200px;
+  background: rgb(41, 41, 41);
+  transition: 0.25s ease ease-out;
+}
+
 nav {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -38,6 +63,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
 }
+
 .mousemove {
   position: relative;
 }
